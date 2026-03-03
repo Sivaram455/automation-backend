@@ -1,0 +1,6 @@
+@echo off
+echo Starting installation...
+call venv\Scripts\pip install bcrypt passlib[bcrypt] pymysql cryptography python-jose[cryptography] python-multipart requests openai uvicorn fastapi sqlalchemy pydantic python-dotenv beautifulsoup4
+echo Installation done.
+echo Starting uvicorn...
+call venv\Scripts\python -m uvicorn main:app --port 8000
